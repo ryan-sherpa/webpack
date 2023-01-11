@@ -1150,6 +1150,10 @@
           "description": "Compression type used for the cache files.",
           "enum": [false, "gzip", "brotli"]
         },
+        "currentBuildDirectory": {
+          "description": "Where Heroku is building the app.",
+          "type": "string"
+        },
         "hashAlgorithm": {
           "description": "Algorithm used for generation the hash (see node.js crypto package).",
           "type": "string"
@@ -1225,6 +1229,10 @@
         },
         "name": {
           "description": "Name for the cache. Different names will lead to different coexisting caches.",
+          "type": "string"
+        },
+        "prevBuildDirectory": {
+          "description": "The last Heroku build directory",
           "type": "string"
         },
         "profile": {

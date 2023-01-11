@@ -4109,6 +4109,11 @@ declare interface FileCacheOptions {
 	compression?: false | "gzip" | "brotli";
 
 	/**
+	 * Where Heroku is building the app.
+	 */
+	currentBuildDirectory?: string;
+
+	/**
 	 * Algorithm used for generation the hash (see node.js crypto package).
 	 */
 	hashAlgorithm?: string;
@@ -4157,6 +4162,11 @@ declare interface FileCacheOptions {
 	 * Name for the cache. Different names will lead to different coexisting caches.
 	 */
 	name?: string;
+
+	/**
+	 * The last Heroku build directory
+	 */
+	prevBuildDirectory?: string;
 
 	/**
 	 * Track and log detailed timing information for individual cache items.
